@@ -1,0 +1,11 @@
+.rounded {
+  border-radius: 6px;
+}
+
+.rounded-lg {
+  border-radius: 30px;
+}
+
+.btn {
+  min-width: 180px !important;
+}

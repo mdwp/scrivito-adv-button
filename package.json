@@ -1,0 +1,46 @@
+{
+  "name": "scrivito-adv-button",
+  "version": "1.0.0",
+  "description": "An advanced button React component for the Scrivito CMS.",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "webpack --watch",
+    "build": "webpack"
+  },
+  "peerDependencies": {
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "scrivito": "^1.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdwp/scrivito-adv-button.git"
+  },
+  "keywords": [
+    "scrivito",
+    "widgets",
+    "react",
+    "react-CMS"
+  ],
+  "author": "mdwp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mdwp/scrivito-adv-button/issues"
+  },
+  "homepage": "https://github.com/mdwp/scrivito-adv-button#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.0",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "@babel/preset-env": "^7.4.2",
+    "babel-loader": "^8.0.5",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  },
+  "dependencies": {
+    "css-loader": "^2.1.1",
+    "prop-types": "^15.7.2",
+    "react-scrollchor": "^6.0.0",
+    "style-loader": "^0.23.1"
+  }
+}
