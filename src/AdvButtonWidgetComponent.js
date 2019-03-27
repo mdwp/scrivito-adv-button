@@ -5,7 +5,9 @@ import Scrollchor from 'react-scrollchor';
 
 const AdvButtonWidgetComponent = Scrivito.connect(({ widget }) => {
   const target = widget.get('target');
-  const rounded = widget.get('rounded');
+  const rounded = widget.get('rounded') || 'small';
+  const alignment = widget.get('alignment') || 'left';
+
   let text = target && target.title();
   /*if (!text) {
     text = <InPlaceEditingPlaceholder>
@@ -16,37 +18,37 @@ const AdvButtonWidgetComponent = Scrivito.connect(({ widget }) => {
 
 
   const classNames = ['btn'];
-  classNames.push(widget.get('style') || 'btn-primary' || 'btn-secondary');
+  classNames.push(widget.get('style') || 'btn-primary');
 
-  if(rounded === 'small')
-   classNames.push('rounded');
+  if (rounded === 'small')
+    classNames.push('rounded');
   else if (rounded === 'large')
     classNames.push('rounded-lg');
 
-  if(typeof target.url() == 'string') {
-  return (
-  <Scrollchor to={ target.url() } animate={{offset: 60}} className={ classNames.join(' ') }>
-  { text }<i className="fa fa-angle-down fa-4" aria-hidden="true" />
-</Scrollchor>
-  )
+  if (typeof target.url() == 'string') {
+    return (
+      <Scrollchor to={target.url()} animate={{ offset: 60 }} className={classNames.join(' ')}>
+        {text}<i className="fa fa-angle-down fa-4" aria-hidden="true" />
+      </Scrollchor>
+    )
   }
   else {
-  return (
-    <Scrivito.LinkTag to={ target } className={ classNames.join(' ') }>
-      { text }<i className="fa fa-angle-right fa-4" aria-hidden="true" />
-    </Scrivito.LinkTag>
-  );
+    return (
+      <Scrivito.LinkTag to={target} className={classNames.join(' ')}>
+        {text}<i className="fa fa-angle-right fa-4" aria-hidden="true" />
+      </Scrivito.LinkTag>
+    );
   }
 });
 
 Scrivito.provideComponent('AdvButtonWidget', ({ widget }) => {
-  if (['center', 'right'].includes(widget.get('alignment'))) {
+
     return (
-      <div className={ `text-${widget.get('alignment')}` }>
-        <AdvButtonWidgetComponent widget={ widget } />
+      <div className={`text-${alignment}`}>
+        <AdvButtonWidgetComponent widget={widget} />
       </div>
     );
-  }
 
-  return <AdvButtonWidgetComponent widget={ widget } />;
+
+  return <AdvButtonWidgetComponent widget={widget} />;
 });

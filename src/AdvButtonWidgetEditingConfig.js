@@ -32,11 +32,12 @@ Scrivito.provideEditingConfig('AdvButtonWidget', {
             description: 'The target and text of the button. Must start with a hash #, if the target is an anchor on the same page.',
         },
         rounded: {
-            title: 'Rounded corners',
+            title: 'Rounded corners. Default: Small',
             description: 'Small: 6px rounded corners. Large: 30px rounded corners.',
             values: [
                 { value: 'small', title: 'Small' },
                 { value: 'large', title: 'Large' },
+                { value: 'no', title: 'No rounded corners' },
             ],
         },
     },
@@ -49,6 +50,6 @@ Scrivito.provideEditingConfig('AdvButtonWidget', {
     initialContent: {
         alignment: 'left',
         style: 'btn-primary',
-        rounded: 'No',
+        rounded: 'small',
     },
 });
