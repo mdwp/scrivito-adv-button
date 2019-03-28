@@ -6,7 +6,7 @@ import Scrollchor from 'react-scrollchor';
 const AdvButtonWidgetComponent = Scrivito.connect(({ widget }) => {
   const target = widget.get('target');
   const rounded = widget.get('rounded') || 'small';
-  const alignment = widget.get('alignment') || 'left';
+
 
   let text = target && target.title();
   /*if (!text) {
@@ -21,9 +21,9 @@ const AdvButtonWidgetComponent = Scrivito.connect(({ widget }) => {
   classNames.push(widget.get('style') || 'btn-primary');
 
   if (rounded === 'small')
-    classNames.push('rounded');
+    classNames.push('btn-round');
   else if (rounded === 'large')
-    classNames.push('rounded-lg');
+    classNames.push('btn-round-lg');
 
   if (typeof target.url() == 'string') {
     return (
@@ -42,6 +42,7 @@ const AdvButtonWidgetComponent = Scrivito.connect(({ widget }) => {
 });
 
 Scrivito.provideComponent('AdvButtonWidget', ({ widget }) => {
+  const alignment = widget.get('alignment') || 'left';
 
     return (
       <div className={`text-${alignment}`}>
@@ -50,5 +51,4 @@ Scrivito.provideComponent('AdvButtonWidget', ({ widget }) => {
     );
 
 
-  return <AdvButtonWidgetComponent widget={widget} />;
 });
