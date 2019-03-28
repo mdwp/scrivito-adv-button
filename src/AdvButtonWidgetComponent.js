@@ -21,13 +21,13 @@ const AdvButtonWidgetComponent = Scrivito.connect(({ widget }) => {
   classNames.push(widget.get('style') || 'btn-primary');
 
   if (rounded === 'small')
-    classNames.push('btn-round');
+    classNames.push('adv-btn-round');
   else if (rounded === 'large')
-    classNames.push('btn-round-lg');
+    classNames.push('adv-btn-round-lg');
 
   if (typeof target.url() == 'string') {
     return (
-      <Scrollchor to={target.url()} animate={{ offset: 60 }} className={classNames.join(' ')}>
+      <Scrollchor to={target.url()} className={classNames.join(' ')}>
         {text}<i className="fa fa-angle-down fa-4" aria-hidden="true" />
       </Scrollchor>
     )

@@ -1,9 +1,9 @@
-.btn-round {
+.adv-btn-round {
   border-radius: 6px !important;
   min-width: 180px !important;
 }
 
-.btn-round-lg {
+.adv-btn-round-lg {
   border-radius: 30px !important;
   min-width: 180px !important;
 }

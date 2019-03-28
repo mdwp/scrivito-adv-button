@@ -1,8 +1,7 @@
 # Scrivito Advanced Button
-# Scrivito Eyecatcher
 [![CMS: Scrivito](https://img.shields.io/badge/CMS-Scrivito-brightgreen.svg)](https://scrivito.com) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-An alternative Button React component/Scrivito widget for the Scrivito CMS.
+An alternative button React component/Scrivito widget for the Scrivito CMS.
 
 ## Installation
 
@@ -19,19 +18,19 @@ Import the widget in your javascript (e.g. in `index.js` or `Widgets/index.js`).
 Add this line to your index.js:
 
 ```
-import "scrivito-eyecatcher";
+import "scrivito-adv-button";
 ```
 
 Also add the styling of the widget to your app. This can be done by either loading it via `css-loader` (e.g. in `index.js` or `Widgets/index.js`):
 
 ```
-import "scrivito-eyecatcher/index.css";
+import "scrivito-adv-button/index.css";
 ```
 
 Or by including the styling to your style sheets (e.g. in `index.scss`):
 
 ```scss
-import "~scrivito-eyecatcher/index.css";
+import "~scrivito-adv-button/index.css";
 ```
 
 
@@ -53,7 +52,7 @@ npm install file:<path to build folder>
 e.g.
 
 ```
-npm install file:../scrivito-eyecatcher/build/
+npm install file:../scrivito-adv-button/build/
 ```
 
 To publish the package:
