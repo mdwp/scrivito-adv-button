@@ -52,7 +52,7 @@ npm install file:<path to build folder>
 e.g.
 
 ```
-npm install file:../scrivito-eyecatcher/build/
+npm install file:../scrivito-adv-button/build/
 ```
 
 To publish the package:
