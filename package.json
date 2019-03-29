@@ -1,6 +1,6 @@
 {
   "name": "scrivito-adv-button",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "An alternative Button React component for the Scrivito CMS.",
   "main": "index.js",
   "peerDependencies": {

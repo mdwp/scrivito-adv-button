@@ -30,12 +30,12 @@ import "scrivito-adv-button/index.css";
 Or by including the styling to your style sheets (e.g. in `index.scss`):
 
 ```scss
-import "~scrivito-adv-button/index.css";
+@import "~scrivito-adv-button/index.css";
 ```
 
 
 ## Features
-The Scrivito Advanced Button Widget renders a button, with optional rounded borders and the option to set an anchor for the link. Works best in conjunction with our Headchor Widget, where you can store an anchor ID.
+The Scrivito Advanced Button Widget renders a button, with optional rounded borders and the option to set an anchor for the link. Works best in conjunction with our Headchor Widget, where you can store an anchor ID. The Headchor Widget is **part** of this package and is accessible in your Scrivito App automatically after you've installed this package.
 
 ## Development
 
