@@ -3,6 +3,11 @@
 
 An alternative button React component/Scrivito widget for the Scrivito CMS.
 
+## Screenshot
+
+![Screenshot](https://raw.githubusercontent.com/mdwp/scrivito-adv-button/master/adv-button-screenshot.png)
+
+
 ## Installation
 
 Open your terminal.
