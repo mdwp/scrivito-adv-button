@@ -9,13 +9,14 @@ const AdvButtonWidgetComponent = Scrivito.connect(({ widget }) => {
 
 
   let text = target && target.title();
-  /*if (!text) {
-    text = <InPlaceEditingPlaceholder>
-      Provide the button text in the widget properties.
-    </InPlaceEditingPlaceholder>;
-  }*/
 
-
+  if (!text && Scrivito.isInPlaceEditingActive()) {
+    return (
+        <h4 className="text-center">
+          Provide the button text in the widget properties.
+        </h4>
+    );
+  }
 
   const classNames = ['btn'];
   classNames.push(widget.get('style') || 'btn-primary');
