@@ -28,18 +28,19 @@ const AdvButtonWidgetComponent = Scrivito.connect(({ widget }) => {
 
   if (target && typeof target.url() == 'string') {
     return (
-      <Scrollchor to={target.url()} className={classNames.join(' ')}>
-        {text}<i className="fa fa-angle-down fa-4" aria-hidden="true" />
-      </Scrollchor>
-    )
-  }
-  else {
-    return (
       <Scrivito.LinkTag to={target} className={classNames.join(' ')}>
         {text}<i className="fa fa-angle-right fa-4" aria-hidden="true" />
       </Scrivito.LinkTag>
     );
   }
+  else {
+    return (
+      <Scrollchor to={target.url()} className={classNames.join(' ')}>
+        {text}<i className="fa fa-angle-down fa-4" aria-hidden="true" />
+      </Scrollchor>
+    )
+  }
+    
 });
 
 Scrivito.provideComponent('AdvButtonWidget', ({ widget }) => {
